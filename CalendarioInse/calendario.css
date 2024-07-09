@@ -1,0 +1,189 @@
+/* Estilos gerais */
+.container {
+  width: 100%; /* Ajuste para largura total */
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+  border: 3px solid rgb(119, 26, 119);
+  text-align: center;
+  color: purple;
+}
+
+.screen {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.screen input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.CadasJogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen input[type="submit"] {
+  width: 50%;
+  padding: 10px;
+  background-color: #4B1846;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 110%;
+}
+
+h2 {
+  text-align: center;
+}
+
+#imagem-noticia {
+  margin-bottom: 15px;
+}
+
+.tela {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+th {
+  color: rebeccapurple;
+}
+
+.filtro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filtro label {
+  margin-right: 10px;
+}
+
+.filtro select,
+.filtro input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filtro button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tableCalen {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  display: table;
+}
+
+.tableCalen th, .tableCalen td {
+  padding: 8px;
+  border-bottom: 1px solid #d4cbcb; /* Linha inferior em cada célula */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .tableCalen {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tableCalen thead {
+    display: none;
+  }
+  
+  .tableCalen tbody, .tableCalen tr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .tableCalen td {
+    display: block;
+    padding: 10px;
+    position: relative;
+    text-align: right; /* Alinha texto à direita */
+  }
+  
+  .tableCalen td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: rebeccapurple;
+    position: absolute;
+    left: 10px;
+    text-align: left; /* Alinha rótulo à esquerda */
+  }
+}
+
+.InfoCalen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.BotaoEditar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  font-weight: bold;
+}
+
+.BotaoRemo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-weight: bold;
+}
+
+.labelCadas {
+  font-weight: bold;
+  color: purple;
+}
+
+.inputCadas input {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #7c559b;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+}
+
+.inputCadas input:focus {
+  border: 1px solid purple;
+}

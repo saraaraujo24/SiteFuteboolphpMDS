@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sobre</title>
+    <style>
+        .PagAdm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding: 20px;
+            min-height: 80vh;
+        }
+
+        .AdmL {
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+        }
+        .AdmLetra {
+            flex: 1 1 50%; /* Ocupa 50% do espaço disponível */
+            text-align: center;
+        }
+        .AdmLetra h2 {
+            font-size: 380%;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1); /* Aumente a escala para um efeito mais visível */
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 8s ease-in-out infinite; /* Altere a duração conforme necessário */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/LOGO VERTICAL3.png" width="100" height="180">
+        </div>
+        <!-- NAVEGAÇÃO MENU -->
+        <div class="menu-btn">
+            <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+        </div>
+        <ul class="estiloUl">
+            <a href="pagAdm.html">Home</a>
+            <a href="./CalendarioInse/CalendarioInserir.php">Editar Calendario</a>
+            <a href="./CriarNews.php">Criar Noticias</a>
+            <a href="index.html">Sair</a>
+
+            <div class="close-icon" onclick="closeMenu()">
+                <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </div>
+        </ul>
+        <div class="menu-icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+    </div>
+    <!--end container-->
+    </header>
+    <section class="PagAdm">
+        <div class="AdmImgTamanho">
+            <img class="animate-fade-in" src="./img/Coruja.png" alt="Descrição da imagem">
+        </div>
+        <div class="AdmLetra">
+            <h2 class="AdmLetra">Seja Bem-Vindo</h2>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <div>
+                <img class="imagi" src="img/Coruja.png" width="150" height="150">
+            </div>
+            <p>©Copyright</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <!--end footer-->
+    <script src="js/main.js"></script>
+    <script src="js/slides.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

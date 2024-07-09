@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+    <title>Mídia</title>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        .item {
+            flex: 0 0 calc(25% - 20px); /* 25% de largura com espaçamento entre as fotos */
+            margin: 10px; /* Espaçamento entre as fotos */
+            overflow: hidden; /* Para garantir que as imagens não ultrapassem seus contêineres */
+            border-radius: 5px; /* Borda arredondada para os contêineres das fotos */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar as fotos */
+        }
+    
+        .item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Para garantir que as imagens se ajustem ao contêiner mantendo a proporção */
+            transition: transform 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+        }
+    
+        .item:hover img {
+            transform: scale(1.1); /* Efeito de escala ao passar o mouse para destacar a foto */
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/LOGO VERTICAL3.png" width="100" height="150">
+        </div>
+        <!-- NAVEGAÇÃO MENU -->
+        <div class="menu-btn">
+            <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+        </div>
+        <ul class="estiloUl">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="./CalendarioInse/calendario.html">Jogos</a></li>
+            <li><a href="midia.html">Galeria</a></li>
+            <li><a href="noticias.php">Notícias</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="./login2/index.html">Login</a></li>
+        </ul>
+    </nav>
+    <div id="instafeed" class="gallery"></div>
+
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            accessToken: 'IGQWRNVF9CRDFBTXNCd3U5QThld3JOOF9DVUVYc2hTaDFENVJmdjY5NTBkRE91ZAHhHWW52SzdBWXM2aktiXzdfWk9YYjZAkdnIxclI0ZATQtNGRhbUtxWmNsWG8zdWUybm41c1g0ZA2VuYVB4cjZAPZA2Jvc1k0c1ctVWcZD',
+            limit: 32,
+            template: '<div class="item"><a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a></div>',
+            after: function() {
+                // Nada específico para executar após carregar as imagens
+            }
+        });
+        feed.run();
+    </script>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <div>
+                <img class="imagi" src="img/Coruja.png" width="150" height="150"> 
+            </div>
+            <p>©Copyright</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <!--end footer-->
+    <script src="js/menu.js"></script>
+</body>
+</html>

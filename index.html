@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/slides.css">
+    <link rel="stylesheet" href="css/cardTrofeu.css">
+    
+    <title>Unidos do Jardim Rezende </title>
+</head>
+<style>
+  .item-container {
+    text-align: center; /* Centraliza o conteúdo dentro do container */
+ 
+}
+
+.noticia-data, .noticia-titulo {
+    margin: 0; /* Remove margens para alinhar corretamente */
+    text-align: center; /* Centraliza o texto dentro dos parágrafos */
+}
+
+/*noticia*/
+.NewsPag{
+        display: flex; /* Make the body a flex container */
+        
+        flex-direction: column; /* Arrange content vertically */
+      
+      }
+      .NCon {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Ajustar o espaço entre os containers */
+            justify-content: center; /* Centralizar os containers */
+        }
+
+
+        .centralizadoMembros1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+
+        .card1 {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 40px;
+            padding: 15px;
+            width: 400px; /* Definir uma largura fixa para cada card */
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icone img {
+            width: 100%; /* Utilizar 100% para preencher todo o espaço disponível */
+            height: auto;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+           
+        }
+
+        .noticia-data, .noticia-titulo {
+            margin: 10px 0;
+            font-weight: bold; 
+            font-size:110%;
+        }
+
+        .ler-mais {
+            background-color: #7c559b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .ler-mais:hover {
+            background-color: #e8daef;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 1000px;
+            position: relative;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            cursor: pointer;
+        }
+        /* Estilos gerais para dispositivos pequenos */
+
+        @media (max-width: 768px) {
+          .NCon {
+            flex-direction: column;
+          }
+          .card1 {
+            width: 80%;
+          }
+          .centralizadoMembros1 {
+        
+            justify-content: center;
+            align-items: center;
+          
+        }
+        }
+    
+        .teams-container {
+        display: flex; /* Utiliza o flexbox para layout flexível */
+        align-items: center;
+        justify-content: center; /* Centraliza verticalmente os itens */
+        }
+
+        .teams-container p, .teams-container h2 {
+            margin: 0 10px;
+            font-size: 150%; /* Margem entre os itens para separação */
+            color: #331A4D;
+        }
+
+
+    </style>
+<body>
+    <!--header-->
+    <header style="background: -webkit-linear-gradient(to top, #7C559B,#672374);
+     background: -o-linear-gradient(to top, #7C559B,  #7C559B);
+     background: -moz-linear-gradient(#672374,  #7C559B);
+     background: linear-gradient(to top,  #0e0909, #4B1846);">
+        <!--container-->
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/logofut3.png " width="200" height="200" alt="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="historia.html">História</a>
+                    <a href="./CalendarioInse/calendario.html">Jogos</a>
+                    <a href="midia.html">Galeria</a>
+                    <a href="noticias.php">Notícias</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="./login2/index.html">Login</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1 class="texto-animado">Unidos Jardim Rezende</h1>
+                    <p color="write">"Vamos com garra, determinação e trabalho em equipe! Juntos, somos imparáveis. Vamos em frente!<br>
+                    Escolinha de Futebol Unidos do Jardim Rezende F.C. </p><br>
+                    
+                        <div class="contayner">
+                            <a  class="lynks" href="https://m.facebook.com/escolinhadefutebolujr" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a class="lynks"href="https://www.youtube.com/@TVUnidosJR/videos" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            <a  class="lynks"href="https://www.instagram.com/socce_rjunior?utm_source=qr&igsh=MWg3b3c4b3lwc2QzZQ==" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a class="lynks"href="https://wa.me/553597317199" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                        </div>
+                </div>
+            </section>
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!--faça mais-->  
+    <section class="faca-mais">
+
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+    
+                <div class="slide first">
+                    <img src="./img/fute1.jpg" alt="imagem1">
+                </div>
+    
+                <div class="slide">
+                    <img src="./img/fute2.jpg" alt="imagem2">
+                </div>
+    
+                <div class="slide">
+                    <img src="./img/fute3.jpg" alt="imagem3">
+                </div>
+    
+                <div class="slide">
+                    <img src="./img/fute4.jpg" alt="imagem4">
+                </div>
+              
+            </div>
+    
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+    
+        </div>
+        <div class="botao-centro">
+            <a href="midia.html" class="btn">Ver mais</a>
+        </div>
+
+
+    <!---Noticias-->
+
+
+        <h2  class="letraIn">Ultimas Noticias</h2>
+        <section class="NewsPag">
+            <div class="noticias">
+                <div class="NCon" id="news-container">
+                    <!-- Notícias serão carregadas aqui -->
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="content1">
+                            <img id="modal-img" src="" alt="" width="50%" height="50%">
+                            <p id="modal-data"></p>
+                            <p class="noticia-titulo" id="modal-titulo"></p>
+                            <p id="modal-noticia"></p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <div class="botao-centro">
+            <a href="noticias.php" class="btn">Ver mais</a>
+        </div>
+    </section>
+    <!---horario do jogos-->
+    <header class="headers">
+        <h2 class="letraIn">Horário dos Jogos</h2>
+    </header>
+
+        <main>
+            <section class="Calen" id="calendar">
+                <!-- Os dados do calendário serão carregados aqui -->
+            </section>
+            <div class="botao-centro">
+                <a href="calendario.php" class="btn">Ver mais</a>
+            </div>
+        </main>
+      
+        <!---fim do horario dos josgos-->
+
+
+
+    <section >
+        <div class="youtube">
+            <iframe  src="https://www.youtube.com/embed/I1M4FT6p6yU?si=2h1iKIrFzDukDvLC"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe  src="https://www.youtube.com/embed/CYmezOUfhiw?si=qSRIYEMEd1fx8PJJ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe  src="https://www.youtube.com/embed/3oOXXBWMkWE?si=sAZl0KpS628O464U"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <h2  class="letraIn">Acompanhe-nos no Youtube</h2>
+        <div class="botao-centro">
+            <a href="https://www.youtube.com/@TVUnidosJR/videos" target="_blank" class="btn">Ver mais</a>
+        </div>
+    </section>
+
+    <h2 class="letraIn">Nossas Conquistas</h2>
+    <section class="faca-mais">
+        <div class="containerTrofeuImg">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./img/trofeu.png" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <div class="flip-card-Letra">
+                    <h1>Campeonato Regional</h1><br>
+                    <p class="flip-card-LetraP">UJR FC & Engineer</p><br> 
+                    <p class="flip-card-LetraP">1 X 0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./img/trofeu.png" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <div class="flip-card-Letra">
+                    <h1>Campeonato Regional</h1><br>
+                    <p class="flip-card-LetraP">UJR FC & Engineer</p><br> 
+                    <p class="flip-card-LetraP">1 X 0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./img/trofeu2.png" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <div class="flip-card-Letra">
+                    <h1>Campeonato Regional</h1><br>
+                    <p class="flip-card-LetraP">UJR FC & Engineer</p><br> 
+                    <p class="flip-card-LetraP">1 X 0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        <div class="botao-centro">
+            <a href="historia.html" class="btn">Ver mais</a>
+        </div>
+    </section>
+    <!--end faça mais-->
+    <!--Footer-->
+    <footer class="footer">
+          <div>
+                <a  class="lynks" href="https://m.facebook.com/escolinhadefutebolujr" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a class="lynks"href="https://www.youtube.com/@TVUnidosJR/videos" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a  class="lynks"href="https://www.instagram.com/p/C6zheUSvj5m/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a class="lynks"href="https://wa.me/553597317199" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            
+            <div>
+                <img class="imagi" src="img/Coruja.png" width="150" height="150" >  
+            </div>
+            <p>©Copyright</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <!--end footer-->
+    <script src="js/main.js"></script>
+    <script src="js/slides.js"></script>
+    <script src="js/get_calendar_data.js"></script>
+    <script src="js/get_news_data.js"></script>
+   
+    
+</body>
+
+</html>

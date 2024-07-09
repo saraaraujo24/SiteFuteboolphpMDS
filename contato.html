@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="fixamodal.css" />
+  <title>Contato</title>
+</head>
+
+
+<body>
+  <!--header-->
+  <header style="background-image: url('img/homecor.png')">
+    <!--container-->
+    <div class="container">
+      <nav>
+        <a href="index.html">
+          <img src="img/LOGO VERTICAL3.png " width="15%" height="15%" alt="logo">
+        </a>
+        <ul class="ulCon">
+          <a href="index.html">Home</a>
+          <a href="historia.html">História</a>
+          <a href="./CalendarioInse/calendario.html">Jogos</a>
+          <a href="midia.html">Galeria</a>
+          <a href="noticias.php">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="./login2/index.html">Login</a>
+          <div class="close-icon" >
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+          </div>
+        </ul>
+        <div class="menu-icon" >
+          <i class="fa fa-bars"></i>
+        </div>
+      </nav>
+      <section class="banner">
+        <div class="banner-text">
+          <h1>Nosso Contato</h1>
+          <p></p>
+      </section>
+    </div>
+    <!--end container-->
+  </header>
+  <!--end header-->
+  <!--contato-->
+  <section class="contato">
+    <div class="container">
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.4357972143425!2d-45.47239098764047!3d-22.934172144559817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccf1295c08ed8d%3A0x27f301ffa2289e57!2sEscolinha%20de%20Futebol%20Unidos%20do%20Jardim%20Rezende%20F.C.!5e0!3m2!1spt-BR!2sbr!4v1712837257494!5m2!1spt-BR!2sbr"
+          width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="contato-info">
+        <div class="left-side">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Av. Abel Corrêa Guimarães, s/n - Vila Rica, Pindamonhangaba - SP, 12422-470</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>undiosalgumacoisa@gmail.com</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(xx)XXXXX-XXXX</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(xx)XXXXX-XXXX</p>
+            </div>
+        </div>
+        <div class="right-side">
+          <button id="open-modal" class="btn blink">Inscreva-se</button>
+        </div>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <iframe name="hidden_iframe" id="ContatoForms" style="display:none;" onload=""></iframe>
+        <form method="post" id="ContatoForms" target="hidden_iframe"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeA_dzFg5C3slIpbdXEvkllz0BJbQ59UEgdZr-MkfLT6lXH8g/formResponse">
+          <div class="fieldset">
+            <header class="modal-header">
+
+              <button id="close-modal" color="green" class="close-btn">
+                X
+              </button>
+            </header>
+
+            <h1>Formulario</h1>
+            <label class="labell" for="first-name"> Nome Completo:
+              <input class="espaco" id="first-name" name="entry.2085702735" type="text" required />
+            </label>
+            <label class="labell" for="first-name">Nome da Mãe:
+              <input class="espaco" id="nomeMae" name="entry.513008032" type="text" required />
+            </label>
+            <label class="labell" for="first-name">Nome do Pai:
+              <input class="espaco" id="nomePai" name="entry.1461250414" type="text" required />
+            </label>
+            <div class="containerFixa">
+              <label class="labell" for="first-name"> Data de Nascimento:
+                <input class="SelInp" id="data_nascimento" name="entry.1231217012" type="text" required />
+              </label>
+              <label class="labell" for="sexo">Sexo:
+                <select class="SelInp" id="sexo" name="entry.1378293333">
+                  <option value="M">Masculino</option>
+                  <option value="F">Feminino</option>
+                </select>
+              </label>
+              <label class="labell" for="first-name">Portador de Deficiência?
+                <select class="SelInp" name="entry.1431496162">
+                  <option value="Auditiva">Auditiva</option>
+                  <option value="Motora">Motora</option>
+                  <option value="Fisica">Física</option>
+                  <option value="Mental">Mental</option>
+                  <option value="Ocular">Ocular</option>
+                  <option value="Não possui deficiência" selected>Não possui deficiência</option>
+                </select>
+              </label>
+              <label class="labell" for="first-name">Faz uso de Remédio Controlado?
+                <select class="SelInp" name="entry.1879442686">
+                  <option value="Não">Não</option>
+                  <option value="Sim">Sim</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="containerFixa">
+              <label class="labell" for="first-name">Endereço:
+                <input class="SelInp" id="Endereço" name="entry.2142044294" type="text" required />
+              </label>
+              <label class="labell" for="first-name">Bairro:
+                <input class="espaco" id="Bairro" name="entry.13564969" type="text" required />
+              </label>
+              <label class="labell" for="first-name">Celular:
+                <input class="SelInp" id="celular" name="entry.66060671" type="text" required />
+              </label>
+              <label class="labell" for="first-name">Escola:
+                <input class="SelInp" id="Escola" name="entry.1209809241" type="text" required />
+              </label>
+              <label class="labell" for="first-name">Série:
+                <input class="espacoPAFixa" id="Serie" name="entry.484375646" type="number" required />
+              </label>
+
+            </div>
+            <button class="buttonEnviarFixa" type="submit" >Enviar
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div><br><br><br>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="container">
+      <div class="links">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+      <div>
+        <img class="imagi" src="img/Coruja.png" width="150" height="150">
+
+      </div>
+      <p>©Copyright</p>
+      <p>Todos os direitos reservados</p>
+    </div>
+  </footer>
+  <!--end footer-->
+  <script src="fixaModal.js"></script>
+ 
+
+</body>
+
+</html>
