@@ -152,9 +152,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
-
 <script src="../js/menu.js"></script>
 <br><br><br><br>
     <!--Footer-->

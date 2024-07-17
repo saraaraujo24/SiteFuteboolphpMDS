@@ -6,56 +6,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../styyles.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="calendario.css"/>
 
     <title>Campeonato de Futebol</title>
-
-    <style>
-        .game {
-            margin-bottom: 20px; /* Espaçamento entre os jogos */
-        }
-
-        .item-container {
-            text-align: center; /* Centraliza o conteúdo dentro do container */
-            display: flex; /* Layout flexível */
-            flex-direction: column; /* Empilha os itens verticalmente */
-            gap: 10px; /* Espaçamento entre os itens */
-            max-width: 300px; /* Largura máxima do container */
-            margin: 0 auto; /* Centraliza o container na página */
-        }
-
-        .time-images {
-            display: flex; /* Layout flexível para as imagens dos times */
-            justify-content: center; /* Centraliza as imagens dos times horizontalmente */
-            gap: 10px; /* Espaçamento entre as imagens */
-            margin-bottom: 10px; /* Espaçamento abaixo das imagens */
-        }
-
-        .time-images img {
-            max-width: 100px; /* Largura máxima das imagens dos times */
-            height: auto; /* Altura automática mantendo a proporção */
-        }
-
-        .noticia-data, .noticia-titulo {
-            margin: 0; /* Remove margens para alinhar corretamente */
-            text-align: center; /* Centraliza o texto dentro dos parágrafos */
-        }
-
-        .Calen {
-            min-height: 100vh;
-        }
-        
-        @media only screen and (min-width: 100px) and (max-width: 391px) {
-            .time-images {
-            display: flex; /* Layout flexível para as imagens dos times */
-            justify-content: center; /* Centraliza as imagens dos times horizontalmente */
-            flex-direction: column;
-            align-items: center;
-        }
-        }
-    </style>  
 </head>
 
 <body class="bodi">
@@ -92,26 +47,25 @@
     </main>
 
     <script src="../js/menu.js"></script>
-    <script src="./getCalendario.js">
-       
-    </script>
+    <script src="./getCalendario.js"></script>
 
     <!--Footer-->
     <footer class="footer">
-        <div class="container">
-            <div class="links">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-            </div>
-            <div>
-                <img class="imagi" src="../img/Coruja.png" width="150" height="150">
-            </div>
-            <p>©Copyright</p>
-            <p>Todos os direitos reservados</p>
-        </div>
-    </footer>
-    <!--end footer-->
+        <div>
+              <a  class="lynks" href="https://m.facebook.com/escolinhadefutebolujr" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a class="lynks"href="https://www.youtube.com/@TVUnidosJR/videos" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+              <a  class="lynks"href="https://www.instagram.com/p/C6zheUSvj5m/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a class="lynks"href="https://wa.me/553597317199" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+          
+          <div>
+              <img class="imagi" src="../img/Coruja.png" width="150" height="150" >  
+          </div>
+          <p>©Copyright</p>
+          <p>Todos os direitos reservados</p>
+      </div>
+  </footer>
+  <!--end footer-->
 
 </body>
 </html>

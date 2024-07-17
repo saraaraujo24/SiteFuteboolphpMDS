@@ -1,115 +1,111 @@
 
   
-  h1, p {
+h1, p {
     text-align: center;
-  }
+}
   
 form {
-  font-size: 18px;
-  color:#7c559b;
-  width: 50%;
-  min-width: 300px;
-  margin: 0 auto;
-  padding-bottom: 2em;
+    font-size: 18px;
+    color:#7c559b;
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
 }
 
 .fieldset {
-  box-shadow: 10px 10px 40px#7c559b;
-  padding: 2px;
-  background-color: #fff;
-  border-radius: 8px;
+    box-shadow: 10px 10px 40px#7c559b;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 8px;
 }
   
 fieldset:last-of-type {
-  border-bottom: 1px solid #7c559b;
+    border-bottom: 1px solid #7c559b;
 }
   
 .labell {
-  display: block;
-  margin: 0.5rem 0;
-  margin-left: 2%;
-  font-size: 16px;
+    display: block;
+    margin: 0.5rem 0;
+    margin-left: 2%;
+    font-size: 16px;
 }
   
- .espaco
-  {
+.espaco{
     width: 50%;
     height: 30px;
     min-height: 1.5em;
     border-radius: 7px;
     border-bottom: 1px solid #7c559b;
-  }
+}
 
-  .espacoPAFixa{
+.espacoPAFixa{
     width: 30%;
     height: 30px;
     min-height: 1.5em;
     border-radius: 7px;
+}
 
-  }
 .SelInp{
     height: 30px;
     min-height: 1.5em;
     border-radius: 7px; 
     border-bottom: 1px solid #7c559b;
-  }
+}
 
-  input, textarea {
- 
-    border: 1px solid #7c559b;
-    
-  }
+input, textarea {
+    border: 1px solid #7c559b; 
+}
   
-  .inline {
+ /* .inline {
     width: unset;
     margin: 0 0.5em 0 0;
     vertical-align: middle;
-  }
+  }*/
   
 
-  input[type="file"] {
+input[type="file"] {
     padding: 1px 2px;
-  }
+}
   
   
 .containerFixa{
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.FixaCaixaContainer{
+/*.FixaCaixaContainer{
   width: 50%;
   font: weight 9%;
   display: flex;
   flex-direction: row;
   color:#000;
-  font-size: 100%;/*texto principal*/
-
-}
+  font-size: 100%;
+}*/
 
 .buttonEnviarFixa{
-  display: block;
-  width: 20%;
-  margin: 1em auto;
-  height: 2em;
-  font-size: 1.1rem;
-  background-color:#7c559b;
-  border-color:#7c559b;
-  color: #fff;
-  transition: all linear 160ms;
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
+    display: block;
+    width: 20%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color:#7c559b;
+    border-color:#7c559b;
+    color: #fff;
+    transition: all linear 160ms;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
 }
 
 .buttonEnviarFixa:hover{
-  background-color: #4B1846;
+    background-color: #4B1846;
 }
 
 
 /*Modal*/
 
-.containerMo {
+/*.containerMo {
 
   justify-content: center;
     align-items: center;
@@ -117,7 +113,7 @@ fieldset:last-of-type {
     margin-top: 3px;
     width: 100%;
     min-width: 500px;
-  }
+  }*/
   
   .modal {
     display: none; /* Initially hidden */
@@ -131,48 +127,43 @@ fieldset:last-of-type {
     background-color: rgba(0,0,0,0.4); /* Black background with transparency */
   }
   
-  .modal-content {
-
+.modal-content {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-
     width: 100%; /* Could be wider or narrower */
     animation-name: modal-appear; /* Optional animation for opening */
     animation-duration: 0.4s;
-  }
+}
   
   @keyframes modal-appear {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   
-  .modal-body {
+.modal-body {
     padding: 2px 16px;
-  }
+}
   
-  .modal-header {
+.modal-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center; 
-  }
+}
   
-  .close-btn {
-    background-color: red;
-    font-size: 15px;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
+.close-btn {
+    font-size: 25px;
+    color: #7c559b;;
     width: 1.7em; /* Example using em unit */
     margin: 0.5em; /* Example using em unit */
-  }
+}
   
-  .close-btn:hover {
+.close-btn:hover {
     background-color: #4B1846;
-  }
+}
   
-  .modal:target .close-btn {
+.modal:target .close-btn {
     display: block;
-  }
+}
 
   

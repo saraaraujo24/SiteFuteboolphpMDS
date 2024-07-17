@@ -9,7 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/pagNoticia.css">
     <title>Sobre Unidos Jardin Rezende</title>
     <?php
     include 'global.php';
@@ -21,167 +21,6 @@
     $sql_query = $mysqli->query("SELECT id, noticia, titulo, nome, path, DATE_FORMAT(data_criacao,'%d/%m/%Y') AS DataFormatada FROM News ORDER BY data_criacao DESC") or die($mysqli->error);
 
     ?>
-
-
-    <style>
-        .NewsPag {
-            display: flex;
-            /* Make the body a flex container */
-            min-height: 100vh;
-            /* Set minimum height for viewport */
-            flex-direction: column;
-            /* Arrange content vertically */
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .NCon {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            /* Ajustar o espaço entre os containers */
-            justify-content: center;
-            /* Centralizar os containers */
-        }
-
-
-       
-
-        .card1 {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 40px;
-            padding: 15px;
-            width:90%;
-            /* Definir uma largura fixa para cada card */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .icone {
-            display: flex;
-            align-items: center;
-            
-        }
-
-        .icone img {
-            width: 100%;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        .noticia-data,
-        .noticia-titulo {
-            margin: 10px 0;
-            font-weight: bold;
-            font-size: 120%;
-            margin-left: 10%;
-        }
-
-        .ler-mais {
-            background-color: #7c559b;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            padding: 10px 20px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        .ler-mais:hover {
-            background-color: #e8daef;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            /* Centraliza horizontalmente */
-            align-items: center;
-            /* Centraliza verticalmente */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 1000px;
-            position: relative;
-            text-align: center;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            cursor: pointer;
-        }
-
-        /* Estilos gerais para dispositivos pequenos */
-
-        /* CSS para dispositivos com largura entre 468px e 976px */
-        @media only screen and (min-width: 268px) and (max-width: 700px) {
-            .NCon {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                /* Para centralizar os cartões no contêiner */
-            }
-
-            .card1 {
-                width: 80%;
-                margin-bottom: 20px;
-                /* Espaçamento entre os cartões */
-            }
-
-            .icone {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;  
-            }
-            .noticia-data,
-            .noticia-titulo {
-                font-weight: bold;
-                font-size: 120%;
-                text-align: center;
-            }
-            .icone img {
-            width: 80%;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-right: 10px;
-            align-items: center;
-            justify-content: center;
-        }
-           
-        }
- 
-    </style>
 </head>
 
 <body>
@@ -234,7 +73,7 @@
                         <img id="modal-img" src="" alt="" width="50%" height="50%">
                         <p id="modal-data"></p>
                         <p class="noticia-titulo" id="modal-titulo"></p>
-                        <p id="modal-noticia"></p>
+                        <p  class="modal-noticia" id="modal-noticia"></p>
                     </div>
                 </div>
             </div>

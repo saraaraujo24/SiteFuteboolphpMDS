@@ -1,0 +1,301 @@
+/* Navigation Styles */
+.navContato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ulCont {
+      color: #fff;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .ulCont li {
+    margin: 0 15px;
+  }
+  
+  .ulCont a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Responsive Menu */
+  .menu-icon {
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .ulCont{
+      display: none; /* Hide navigation links by default on smaller screens */
+      flex-direction: column;
+      position: absolute;
+      background-color: #331a4dde;
+      color: #000;
+      width: 100%;
+      height: 50%;
+      top: 0px; /* Adjust as per your header height */
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center; 
+    }
+   
+    .ulCont.active {
+        display: block; /* Mostra o menu quando a classe active é aplicada */
+    }
+
+    .menu-icon {
+      display: block; /* Show menu icon on smaller screens */
+    }
+  
+    .menu-icon i {
+      font-size: 24px;
+    }
+
+    .ulCont li {
+        margin: 15px 0; /* Espaçamento entre os itens do menu */;
+      }
+      
+      .ulCont a {
+        margin-top: 10%;
+        text-decoration: none;
+        color: #fff; /* Cor dos links do menu */
+        font-weight: bold;
+        font-size: 18px; /* Tamanho da fonte dos links */
+      }
+  }
+  
+
+.container {
+    max-width: 1270px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contato-info .left-side {
+    width: 50%;
+    padding: 20px;
+    background-color: #7c559b;
+    border-radius: 14px;
+    margin-right: 20px;
+}
+
+.contato-info .left-side div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contato-info .left-side div i {
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+
+.contato-info .left-side p {
+    font-size: 17px;
+    color: white;
+}
+
+.contato-info .right-side {
+    width: 50%;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.contato-info .right-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+}
+
+.contato-info .right-side button{
+    border: none;
+    margin: 10px;
+    height: 47px;
+    border-radius: 9px;
+    background-color: #4B1846;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 830px) {
+    .contato-info {
+        flex-direction: column;
+    }
+
+    .contato-info .left-side,
+    .contato-info .right-side {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/*modal inscreva-se*/
+
+
+  
+h1, p {
+    text-align: center;
+}
+  
+form {
+    font-size: 18px;
+    color:#7c559b;
+    width: 50%;
+    min-width: 300px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.fieldset {
+    box-shadow: 10px 10px 40px#7c559b;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+  
+fieldset:last-of-type {
+    border-bottom: 1px solid #7c559b;
+}
+  
+.labell {
+    display: block;
+    margin: 0.5rem 0;
+    margin-left: 2%;
+    font-size: 16px;
+}
+  
+.espaco{
+    width: 50%;
+    height: 30px;
+    min-height: 1.5em;
+    border-radius: 7px;
+    border-bottom: 1px solid #7c559b;
+}
+
+.espacoPAFixa{
+    width: 30%;
+    height: 30px;
+    min-height: 1.5em;
+    border-radius: 7px;
+}
+
+.SelInp{
+    height: 30px;
+    min-height: 1.5em;
+    border-radius: 7px; 
+    border-bottom: 1px solid #7c559b;
+}
+
+input, textarea {
+    border: 1px solid #7c559b; 
+}
+  
+input[type="file"] {
+    padding: 1px 2px;
+}
+  
+  
+.containerFixa{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.buttonEnviarFixa{
+    display: block;
+    width: 20%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color:#7c559b;
+    border-color:#7c559b;
+    color: #fff;
+    transition: all linear 160ms;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+.buttonEnviarFixa:hover{
+    background-color: #4B1846;
+}
+
+
+/*Modal*/ 
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black background with transparency */
+}
+  
+.modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 100%; /* Could be wider or narrower */
+    animation-name: modal-appear; /* Optional animation for opening */
+    animation-duration: 0.4s;
+}
+  
+  @keyframes modal-appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+.modal-body {
+    padding: 2px 16px;
+}
+  
+.modal-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center; 
+}
+  
+.close-btn {
+    font-size: 25px;
+    color: #7c559b;;
+    width: 1.7em; /* Example using em unit */
+    margin: 0.5em; /* Example using em unit */
+}
+  
+.close-btn:hover {
+    background-color: #4B1846;
+}
+  
+.modal:target .close-btn {
+    display: block;
+}
+

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.tituloCadas{
+    font-size: 120%;
+    color: #331A4D;
+    margin-bottom: 5px;
+}
+
+.formLogin input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+    width: 100%;
+}
+
+
+.formLogin input:focus {
+    border: 1px solid #7c559b;
+}
+
+.formLogin label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formLogin a:hover {
+    color: #7c559b;
+}
+
+.btn {
+    background-color:#7c559b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    background-color:#7c559b;
+}
+
+.btnS{
+    background-color:#e22b34;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+
+}
+
+.btnS:hover{
+    transform: scale(1.05);
+    background-color:#e26262;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.elemento {
+    border-radius: 8px;
+    width: 320px;
+}
+
+.elemento1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+dialog {
+    border: none;
+    padding: 0;
+    background: none;
+    border-radius: 15px;
+   
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .closeCadas-btn {
+    font-size: 25px;
+    color: #ee3030ec;
+    width: 1.7em; 
+    margin: 0.5em; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+.closeCadas-btn:hover {
+    background-color:#7c559b3d;
+}

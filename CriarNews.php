@@ -129,171 +129,7 @@ if (isset($_GET["id"])) {
   <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-        .NewsPag {
-            display: flex;
-            /* Make the body a flex container */
-            min-height: 100vh;
-            /* Set minimum height for viewport */
-            flex-direction: column;
-            /* Arrange content vertically */
-            align-items: center;
-            justify-content: center;
 
-        }
-
-        .NCon {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            /* Ajustar o espaço entre os containers */
-            justify-content: center;
-            /* Centralizar os containers */
-        }
-
-        .TituloInser{
-          width: 50%;  
-          height: 50px;
-          border: solid 3px #7c559b;
-          border-radius: 5px;
-          overflow: hidden;
-        }
-              
-
-        .card1 {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 40px;
-            padding: 15px;
-            width:90%;
-            /* Definir uma largura fixa para cada card */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .icone {
-            display: flex;
-            align-items: center;
-            
-        }
-
-        .icone img {
-            width: 100%;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        .noticia-data,
-        .noticia-titulo {
-            margin: 10px 0;
-            font-weight: bold;
-            font-size: 120%;
-            margin-left: 10%;
-        }
-
-        .ler-mais {
-            background-color: #7c559b;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            padding: 10px 20px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        .ler-mais:hover {
-            background-color: #e8daef;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            /* Centraliza horizontalmente */
-            align-items: center;
-            /* Centraliza verticalmente */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 1000px;
-            position: relative;
-            text-align: center;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            cursor: pointer;
-        }
-
-        /* Estilos gerais para dispositivos pequenos */
-
-        /* CSS para dispositivos com largura entre 468px e 976px */
-        @media only screen and (min-width: 268px) and (max-width: 700px) {
-            .NCon {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                /* Para centralizar os cartões no contêiner */
-            }
-
-            .card1 {
-                width: 80%;
-                margin-bottom: 20px;
-                /* Espaçamento entre os cartões */
-            }
-
-            .icone {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;  
-            }
-            .noticia-data,
-            .noticia-titulo {
-                font-weight: bold;
-                font-size: 120%;
-                text-align: center;
-            }
-            .icone img {
-            width: 80%;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-right: 10px;
-            align-items: center;
-            justify-content: center;
-        }
-           
-        }
- 
-    </style>
 <body class="noticias">
 <nav class="navbar">
         <!-- LOGO -->
@@ -310,13 +146,8 @@ if (isset($_GET["id"])) {
             <a href="./CriarNews.php">Criar Noticias</a>
             <a href="./index.html">Sair</a>
 
-            <div class="close-icon" onclick="closeMenu()">
-                <i class="fa fa-times-circle" aria-hidden="true"></i>
-            </div>
         </ul>
-        <div class="menu-icon" onclick="openMenu()">
-            <i class="fa fa-bars"></i>
-        </div>
+     
     </nav>
 <div class='CriarTamanho'><br><br><br><br>
   <form method="POST" action="" enctype="multipart/form-data" >
@@ -324,7 +155,7 @@ if (isset($_GET["id"])) {
       <center><h1 class='tituloNoticias'>Notícias</h1></center>
       <div class='noticias-textarea'><br><br>
         <label><p>Insira o Tiulo da Noticia</p></label>
-        <input class='TituloInser' name="titulo"   placeholder="Escreva o titulo da notícia aqui..."> 
+        <input class='noticias-titulo' name="titulo"   placeholder="Escreva o titulo da notícia aqui..."> 
         <label><p>Insira o texto da Noticia</p></label>
         <textarea class="noticias-textareaInserir" name="noticias" 
           placeholder="Escreva sua notícia aqui..."></textarea>
@@ -332,9 +163,11 @@ if (isset($_GET["id"])) {
       <center><p class='tituloImages'>Selecione as imagens:</p></center>
       <div class='selecionarImg-container'>
         <input class='SelecionarImg' type="file"  name="arquivos[]" id="file" multiple>
-        <button class='buttonEnviar' type="submit" name="submit" value="Incluir">Enviar</button>    
-      </div>
-      <div>
+    </div>
+    <div>
+          <center>
+          <button class='buttonEnviar' type="submit" name="submit" value="Incluir">Enviar</button>
+          </center>    
       
       </div>
      </form>
@@ -360,11 +193,19 @@ if (isset($_GET["id"])) {
                             echo "<p class='noticia-data'>" . $News['DataFormatada'] . "</p>";
                             echo "</div>";
                             echo"<div>";
+                            echo"</div>";
+                            echo "</div>";
+                            echo"<div class='button-container'>";
+                            echo "<button class='ler-mais' data-path='" . $News['path'] . "' data-data='" . $News['DataFormatada'] . "' data-titulo='" . $News['titulo'] . "' data-noticia='" . $News['noticia'] . "'>Ler Mais</button>";
+                            echo "<button class='BotaoEditar' 
+                            data-id='" . $News['id'] . "' 
+                            data-titulo='" . $News['titulo'] . "' 
+                            data-noticia='" . htmlspecialchars($News['noticia']) . "' 
+                            data-path='" . $News['path'] . "' 
+                            onclick='openEditModal(this)'>Editar</button>";
                             echo "<a class='BotaoRemo' href='./excluirNoticias.php?id=" . $News['id'] . "' onclick=\"return confirm('Tem certeza de que deseja remover?');\">";
                             echo "<i class='fa fa-trash'></i> </a>"; // Adiciona o ícone do Font Awesome antes do texto "Remover"
                             echo"</div>";
-                            echo "</div>";
-                            echo "<button class='ler-mais' data-path='" . $News['path'] . "' data-data='" . $News['DataFormatada'] . "' data-titulo='" . $News['titulo'] . "' data-noticia='" . $News['noticia'] . "'>Ler Mais</button>";
                             echo "</div>";
                         }
                         ?>
@@ -408,6 +249,71 @@ if (isset($_GET["id"])) {
       <script src="./js/botaoNews.js"></script>
       <script src="./js/menu.js"></script>
 </div>
+ <!-- Modal para Editar Notícias -->
+ <div id="editModal" class="modal">
+        <div class="modal-contentEdite">
+            <span class="close">&times;</span>
+            <div class="content1">
+                <form id="editForm" method="POST" action="editeNews.php" enctype="multipart/form-data">
+                    <div class="noticias-container">
+                        <center><h2 class="tituloNoticias">Editar Notícia</h2></center>
+                        <div class="noticias-textarea"><br>
+                            <label><p>Editar Título</p></label>
+                            <input class="noticias-titulo" name="titulo" id="editTitulo" placeholder="Escreva o título da notícia aqui...">
+                            <label><p>Editar Notícia</p></label>
+                            <textarea class="noticias-textareaInserir" name="noticia" id="editNoticia" placeholder="Escreva sua notícia aqui..."></textarea>
+                            <br><br>
+                            <label class="labelE" for="time1_img">Editar Imagem </label><br>
+                            <img class="img-preview" id="editImgPreview" src="" alt="Imagem da notícia" width="15%"><br>
+                            <input class="inputE" type="file" name="caminho" id="editCaminho"><br><br>
+
+                            <input type="hidden" name="id" id="editId">
+
+                        </div>
+                        <div>
+                            <center>
+                                <button class="buttonEnviar" type="submit" name="submit" value="Alterar">Alterar</button>
+                            </center>    
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    // JavaScript no final do index.php
+<script>
+function openEditModal(button) {
+    // Extrair dados da notícia do botão
+    var id = button.getAttribute('data-id');
+    var titulo = button.getAttribute('data-titulo');
+    var noticia = button.getAttribute('data-noticia');
+    var path = button.getAttribute('data-path');
+
+    // Preencher campos do formulário de edição no modal
+    document.getElementById('editId').value = id;
+    document.getElementById('editTitulo').value = titulo;
+    document.getElementById('editNoticia').value = noticia;
+    document.getElementById('editImgPreview').src = path;
+
+    // Mostrar o modal
+    var modal = document.getElementById('editModal');
+    modal.style.display = "block";
+
+    // Fechar modal ao clicar no 'x'
+    var span = modal.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Fechar modal ao clicar fora dele
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+</script>
+
 
     <!--end faça mais-->
     <!--Footer-->

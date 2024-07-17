@@ -2,7 +2,8 @@
 session_start();
 
 if (empty($_POST) || (empty($_POST["email"]) || empty($_POST["senha"]))) {
-    print "<script>location.href='index.php';</script>";
+    echo "<script>alert('Por favor, preencha todos os campos');</script>";
+    print "<script>location.href='index.html';</script>";
 } else {
     include("../Config/conexao.php");
     
@@ -26,6 +27,7 @@ if (empty($_POST) || (empty($_POST["email"]) || empty($_POST["senha"]))) {
         print "<script>location.href='../pagAdm.html';</script>";
     } else {
         print "<script>alert('email e/ou senha incorreto(s)');</script>";
-        print "<script>location.href='../index.html';</script>";
+        print "<script>location.href='./index.html';</script>";
+        
     }
 }

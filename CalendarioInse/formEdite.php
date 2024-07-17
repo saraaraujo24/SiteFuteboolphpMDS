@@ -142,7 +142,7 @@ $time2_imgs = isset($usuario['time2_img']) ? explode(',', $usuario['time2_img'])
         <input class="btnAlterar" type="submit" value="Alterar">
     </div><br>
     <center>
-        <a href='iniciaCalen.php'><button type="button" class="btnAlterar">Voltar</button></a>
+        <a href='CalendarioInserir.php'><button type="button" class="btnAlterar">Voltar</button></a>
     </center>
 </form>
 

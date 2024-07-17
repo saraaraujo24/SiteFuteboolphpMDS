@@ -4,7 +4,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    color: #023047
+    color: #023047;
 }
 
 .page {
@@ -15,7 +15,6 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-   
 }
 
 .formLogin {
@@ -25,23 +24,25 @@ body {
     border-radius: 7px;
     padding: 40px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px
+    gap: 5px;
+    max-width: 600px; /* Define uma largura máxima para o formulário */
+    width: 100%; /* Ocupa todo o espaço disponível */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
-
-
 
 .formLogin h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
     font-size: 2.3em;
+    text-align: center; /* Centraliza o título */
 }
 
 .formLogin p {
-    display: inline-block;
     font-size: 14px;
     color: #666;
     margin-bottom: 25px;
+    text-align: center; /* Centraliza o texto */
 }
 
 .formLogin input {
@@ -49,12 +50,11 @@ body {
     font-size: 14px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
-    margin-top: 5px;
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
-
 
 .formLogin input:focus {
     border: 1px solid #7c559b;
@@ -71,6 +71,7 @@ body {
     font-size: 13px;
     color: #555;
     transition: all linear 160ms;
+    text-align: center; /* Centraliza o link */
 }
 
 .formLogin a:hover {
@@ -86,26 +87,100 @@ body {
     transition: all linear 160ms;
     cursor: pointer;
     margin: 0 !important;
-
+   
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
 
 .btn:hover {
     transform: scale(1.05);
     background-color:#7c559b;
-
 }
 
+.btnS {
+    background-color:#e22b34;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+   
+}
 
-  .container{/*uso*/
+.btnS:hover {
+    transform: scale(1.05);
+    background-color:#e26262;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: space-evenly;
+}
+
+.elemento {
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+}
+
+/*.containerBtn {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}*/
+@media screen and (max-width: 768px) {
+    .page {
+        padding: 20px; /* Reduzir o padding para telas menores */
+    }
 
+    .formLogin {
+        padding: 20px; /* Ajustar o padding do formulário para telas menores */
+    }
+
+    .formLogin h1 {
+        font-size: 1.8em; /* Reduzir o tamanho da fonte do título em telas menores */
+    }
+
+    .formLogin input {
+        padding: 12px; /* Reduzir o padding dos inputs para telas menores */
+    }
 }
-    .elemento{ /*uso*/
-    border-radius: 8px;
-      width:300px;
-      height: 300px;
-   
+
+@media screen and (max-width: 480px) {
+    .formLogin {
+        padding: 15px; /* Ajuste adicional do padding para telas muito pequenas */
+    }
+
+    .formLogin h1 {
+        font-size: 1.5em; /* Ajuste menor do tamanho da fonte para telas muito pequenas */
+    }
+
+    .formLogin input {
+        padding: 10px; /* Reduzir ainda mais o padding dos inputs */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .formLogin input {
+        padding: 15px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        transition: all linear 160ms;
+        outline: none;
+        box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+        width: 100%;
+    }
+
 }

@@ -1,5 +1,3 @@
-
-
 .noticias-textarea{
     justify-content: center;
     align-items: center;   
@@ -15,6 +13,15 @@
     border-radius: 10px;
     overflow: hidden;
 }
+
+.noticias-titulo{
+    width: 50%;
+    height: 50px;
+    border: solid 3px #7c559b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 h3{
     text-align: center;
     color: #000;
@@ -95,7 +102,7 @@ h2{
     color: #ec0000;
     cursor: pointer;
     transition: 0.1s;    
-    font-size: 190%;
+    font-size: 190%;  
 }
 
 .BotaoRemo.animate-BotaoRemo {
@@ -104,4 +111,219 @@ h2{
 
 .BotaoRemo:hover {
     background-color: #e8daef;
+}
+
+
+
+/*pagina criar news*/
+
+.NewsPag {
+    display: flex;
+    /* Make the body a flex container */
+    min-height: 100vh;
+    /* Set minimum height for viewport */
+    flex-direction: column;
+    /* Arrange content vertically */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.NCon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Ajustar o espaço entre os containers */
+    justify-content: center;
+    /* Centralizar os containers */
+}
+
+.TituloInser{
+  width: 50%;  
+  height: 50px;
+  border: solid 3px #7c559b;
+  border-radius: 5px;
+  overflow: hidden;
+}
+      
+
+.card1 {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    padding: 15px;
+    width:90%;
+    /* Definir uma largura fixa para cada card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    
+}
+
+.icone img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.noticia-data,
+.noticia-titulo {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 120%;
+    margin-left: 10%;
+}
+
+.ler-mais {
+    background-color: #7c559b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 2px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    height: 40px;
+}
+
+.ler-mais:hover {
+    background-color: #e8daef;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1000px;
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* Estilos gerais para dispositivos pequenos */
+
+/* CSS para dispositivos com largura entre 468px e 976px */
+@media only screen and (min-width: 268px) and (max-width: 700px) {
+    .NCon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Para centralizar os cartões no contêiner */
+    }
+
+    .card1 {
+        width: 80%;
+        margin-bottom: 20px;
+        /* Espaçamento entre os cartões */
+    }
+
+    .icone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+    }
+    .noticia-data,
+    .noticia-titulo {
+        font-weight: bold;
+        font-size: 120%;
+        text-align: center;
+    }
+    .icone img {
+    width: 80%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.SelecionarImg{
+    color: #1f1b1b;
+    font-size: 80%; 
+    margin-top: 1%;
+ }
+}
+#historia-membros img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+
+.modal-contentEdite {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.BotaoEditar{
+    background-color: #7c559b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 10%;
+    height: 40px;
+}
+
+.BotaoEditar:hover {
+    background-color: #e8daef;
+}
+
+.button-container {
+    display: flex; /* Use flexbox para alinhar os botões */
+    gap: 10px; /* Espaçamento entre os botões */
 }

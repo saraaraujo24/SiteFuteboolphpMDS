@@ -7,7 +7,6 @@
     text-decoration: none;
     outline: none;
     font-family: 'Inter', sans-serif;
-    
 }
 
 body {
@@ -18,18 +17,25 @@ section, footer {
     padding: 0;
 }
 
+h2 {
+    text-align: center;
+    margin: 30px;
+    padding: 25px;
+    font-size: 20px;
+    color: #331A4D;
+}
+
 h3 {
     font-size: 20px;
 }
 
-
- 
 .container {
     max-width: 1270px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
+
 
 .btn {
     background-color: #4B1846;
@@ -92,10 +98,6 @@ nav ul {
     align-items: center;
 }
 
-.estiloUl {
-    margin-right: 250px;
-}
-
 nav ul a {
     color: white;
     margin: 0 25px;
@@ -132,13 +134,6 @@ nav .close-icon {
     color: white;
 }
 
-h2 {
-    text-align: center;
-    margin: 30px;
-    padding: 25px;
-    font-size: 20px;
-    color: #331A4D;
-}
 
 .banner {
     display: flex;
@@ -178,286 +173,49 @@ h2 {
 }
 
 
-
-/*faça mais*/
-.faca-mais .container {
-    display: flex;
-    border-radius: 12px;
-  
-}
-
-.faca-mais .faca-mais-text {
-    width: 20%;
-    padding: 0 40px;
-}
-
-.faca-mais .faca-mais-text h3 {
-    font-size: 20px;
-}
-
-.faca-mais .faca-mais-text p{
-    margin: 5px 0 10px 0;
-}
-
-.faca-mais .faca-mais-img {
-    width: 25%;
-    margin: 10px;
-    object-fit: cover;
-    border-radius: 12px;
- 
-}
-
-.faca-mais .faca-mais-img img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.depoimentos h3 {
-    text-align: center;
-}
-
-
-
-
-/*footer*/
-.footer {
-    background-color: #331A4D;
-    text-align: center;
-
-    width: 100%;
-     /* Define a altura do footer */
-    bottom: 0; /* Posiciona o footer na parte inferior */
-  }
-
-.footer i {
-    color: #4f9cf9;
-    font-size: 19px;
-    background-color: white;
-    padding: 10px;
-    margin: 3px;
-    border-radius: 10px;
-}
-
-.footer p {
-    margin-top: 10px;
-    color: white;
-}
-
 .main-content { /* Substitua ".main-content" pela classe do seu conteúdo principal */
     margin-bottom: -50px; /* Ajuste o valor de margin-bottom para coincidir com a altura do footer */
-  }
-/*Pagina Sobre*/
-.sobre .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.sobre .sobre-text {
-    width: 50%;
-    padding-right: 40px;
-}
-.sobre .sobre-textt {
-    width: 100%;
-    padding-right: 40px;
-}
-.sobre .sobre-text p {
-    margin: 18px 0;
-    color: #000000a6;
-}
-
-.sobre .sobre-img {
-    width: 50%;
-}
-.sobre .sobre-text img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-/*Pagina Serviços */
-.servicos h3{
-    text-align: center;
-}
-
-.servicos .container p{
-    text-align: center;
-}
-
-.servicos .rows-cards {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.servicos .row-card-item {
-    background-color: #d3e6fd;
-    width: 350px;
-    padding: 20px;
-    border-radius: 14px;
-    margin: 20px;
-    transition: 0.3s;
-}
-
-.servicos .row-card-item:hover {
-    background-color: #4f9cf9;
-}
-
-.servicos .row-card-item:hover p{
-    color: white;
-}
-
-.servicos .row-card-item img {
-    background-color: #4f9cf9;
-    border-radius: 14px;
-    width: 70px;
-    padding: 9px;
-}
-
-.servicos .row-card-item p.nome-servico {
-    margin: 5px;
-    transition: 0.3s;
-}
-
-.servicos .row-card-item p.descricao-servico {
-    transition: 0.3s;
-}
-
-/*dados*/
-.dados {
-    background-color: #d3e6fd;
-}
-
-.dados .container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.dados .dados-item {
-    text-align: center;
-    margin: 15px;
-    color: #000000be;
-}
-
-.dados .dados-item img {
-    background-color: #4f9cf9;
-    border-radius: 14px;
-    padding: 10px;
-    margin-bottom: 15px;
-    width: 80px;
-}
-
-.dados .dados-item p{
-    font-size: 18px;
-}
-
-.dados .dados-item p strong {
-    font-size: 28px;
-}
-/*historia*/
 
 
-  
-
-
-.contato-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    flex-direction: row;
-    margin-left: 10%;
-    border-radius: 10px;
-}
-
-.contato-info .left-side {
-    width: 50%;
-    padding: 30px;
-    background-color: #7c559b;
-    border-radius: 14px;
-    margin-right: 50px;
-    height: fit-content;
-    margin-left: 10px;
-}
-
-.contato-info .left-side div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.contato-info .left-side div i {
-    font-size: 24px;
-    margin-right: 20px;
-    color: white;
-}
-
-.contato-info .left-side p {
-    font-size: 17px;
-    color: white;
-}
-
-.contato-info .right-side {
-    width: 50%;
-    border-radius: 9px;
-}
-
-.contato-info .right-side input{
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    height: 47px;
-    padding: 15px;
-    border-radius: 9px;
-    transition: 0.3s;
-    border: 1px solid #f1f1f1;
-    color: #212121;
-    
-}
-
-.contato-info .right-side input:focus,
-.contato-info .right-side textarea:focus {
-    border-color: #4f9cf9;
-}
-
-.contato-info .right-side textarea{
-    border: 1px solid #f1f1f1;
-    color: #212121;
-    border-radius: 9px;
-    margin-bottom: 10px;
-    padding: 15px;
-    width: 100%;
-    transition: 0.3s;
-    resize: none;
-}
-
-.contato-info .right-side button{
-    border: none;
-    margin: 10px;
-}
 
 @media(max-width: 830px){
-   
-    /*pagina home responsivo*/
-    .faca-mais .faca-mais-text {
-        margin-top: 10px;
-        padding: 0 20px;
-        order: 1;
-    }
-
-    .faca-mais .container{
-        flex-direction: column;
-    }
-
-    .faca-mais .faca-mais-text h3 {
-        font-size: 48px;
-    }
-
-    .faca-mais .faca-mais-text,
-    .faca-mais .faca-mais-img {
+      /*menu mobile*/
+      .ul {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+        background: -webkit-linear-gradient(to top, #7C559B,#672374);
+        background: -o-linear-gradient(to top, #7C559B,  #7C559B);
+        background: -moz-linear-gradient(#672374,  #7C559B);
+        background: linear-gradient(to top,  #0e0909, #4B1846);
+    }
+    .ul.open {
+        clip-path: circle(141.2% at 100% 0);
+    }
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    nav .menu-icon{
+        display: block;
+    }
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 56px;
+        right: 28px;
     }
 
+ 
     .banner .banner-text {
         padding: 0;
         margin: 80px;
@@ -471,9 +229,7 @@ h2 {
         font-size: 15px;
     }
 
-    .depoimentos .card-item {
-        width: 100%;
-    }
+
     
     .sobre .container {
         flex-direction: column-reverse;
@@ -488,18 +244,7 @@ h2 {
         margin-top: 40px;
     }
 
-    .contato .contato-info {
-        flex-direction: column-reverse;
-    }
 
-    .contato-info .right-side,
-    .contato-info .left-side {
-        width: 100%;
-    }
-
-    .contato-info .right-side {
-        margin-bottom: 30px;
-    }
 
 }
 
@@ -508,81 +253,8 @@ h2 {
         font-size: 50px;
     }
 
-    .faca-mais .faca-mais-text h3 {
-        font-size: 40px;
-    }
-}
-
-
-#noticias-esporte {
-    margin: 20px;
-  }
-  
-  #noticias-esporte h1{
-    text-align: center;
-  }
-
-  #noticias-esporte h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  #noticias-esporte article {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-  
-  #noticias-esporte h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  #noticias-esporte p {
-    font-size: 14px;
-  }
-  
-  #noticias-esporte a {
-    text-decoration: none;
-    color: blue;
-  }
-  
-  #noticias-esporte img {
-    width: 250px;
-    height: 200px;
-    margin-bottom: 5px;
-  }
-
-  .centralizado {
-    text-align: left;
-    display: flex;
-    margin-left: 5%;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    padding: 25px;
- 
-    text-align: justify;
-    position: relative;
-    margin: 20px;
-}
-
-
-
-.letraContato{
-    color: #000;
-}
-
-.icone {
-    margin-bottom: 20px;
    
 }
-
 
 
 .content {
@@ -611,25 +283,6 @@ h2 {
     color:black;
 }
 
-#read_button {
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 15px;
-    background-color: #331A4D;
-    color: #faf1f1;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.2s ease-in-out;
-
-}
-
-#read_button:hover {
-    background-color: transparent;
-    color: white;
-    transition: all 0.2s ease-in-out;
-}
 
 .card.active .content {
     height: auto;
@@ -646,7 +299,8 @@ h2 {
     justify-content: center;
   }
 
- 
+
+
 
 /*Alteracao na noticia*/
 .ln {
@@ -658,31 +312,14 @@ h2 {
 
 
 /*horio dos jogos*/
-.bodi {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.headers {
-    background-color:#fff;
-    color: #331A4D;
-    padding: 20px;
-    text-align: center;
-}
-
-    
 
 main {
-    padding: 20px;
-    
+    padding: 20px;  
 }
-.imagi{
-    align-items: right;
-     
-    right: 200%;
 
- 
+.imagi{
+    align-items: right;   
+    right: 200%; 
 }
 .game {
     margin-bottom: 20px;
@@ -758,209 +395,15 @@ main {
 } 
 
 
-/*historia membro*/
-/*historia pagina*/
 
- 
- .tiHisLetra{
-    margin-top: 5%;
-    color: #331A4D;
- }
- .sobre .containerSobreMembros {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+
+
+
+
   
-}
- .sobre .histPerssoa{
-     width: 50%;
-     font: weight 9%;
-     display: flex;
-     flex-direction: row;
-     color:#000;
-     font-size: 100%;/*texto principal*/
-     flex-basis: 30%;
- 
- }
+
  
 
-.sobre .sobre-img {
-     align-items: center;
-     width: 50%;
-     flex-basis: 30%;
-     
-     
- }
-
-.ImgMembros{
-    width: 80%;
-}
-
-#historia-membros img {
-    width: 250px;
-    height: 250px;
-    margin-bottom: 5px;
-    object-fit: cover;
-  }
-
-  .centralizadoMembros {
-    align-items: flex-start;
- 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    border: 1px solid #4B1846;
-    border-radius: 10px;
-    gap: 20px; 
-    overflow: hidden;
-  }
-
-  .centralizado {
-    justify-content: space-around;
-    flex-direction: row; 
-    
-    flex-wrap: wrap;
-    text-align: center;
-    display: flex;
-    gap: 25px; 
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    padding: 25px;
-    text-align: justify;  
-    margin: 1px;
-}
-
-
-.HisCoruja {
-
-    width: 30%;
-    float: left; 
-  }
-
-
-.containerHis1{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-justify-content: center;
-}
-
-.containerHis {
-    display: flex; /* Ativa o layout grid */
-    grid-template-columns: 1fr 2fr; /* Define colunas com proporção 1:2 */
-    align-items: start;
-    flex-direction: row;
- 
-}
-
- /* Estilos adicionais para as divs */
-  .containerHis img {
-    width: 70%; /* Ocupa toda a largura da coluna */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 0 80px;
-    flex-direction: row;
-  }
-  
-  .inicio {
-    text-align: justify; /* Justifica o texto */
-    margin: 0 40px;
-    margin-top: 4%;
-    font-size: 120%;
-    margin-right: 10%;
-  }
-  
-  .hisImg{
-    display: flex;
-    flex-direction: column; 
-  }
-
-  @media only screen and (min-width: 100px) and (max-width: 706px) {
-    .containerHis img {
-        width: 30%; /* Ocupa toda a largura da coluna */
-        height: auto; /* Mantém a proporção da imagem */
-        display: flex;
-        margin: auto;
-      }
-      .containerHis {
-     
-        grid-template-columns: 1fr 2fr; /* Define colunas com proporção 1:2 */
-        align-items: start;
-        flex-direction: column;
-     
-    }
-    .NewsPag{
-        display: flex; /* Make the body a flex container */
-       
-        flex-direction: column; /* Arrange content vertically */
-        grid-template-rows: 1fr auto;
-      }
-  }
-  @media only screen and (min-width: 768px) and (max-width: 976px) {
-    .containerHis img {
-        width: 30%; /* Ocupa toda a largura da coluna */
-        height: auto; /* Mantém a proporção da imagem */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-      }
-      .containerHis {
-    
-        align-items: start;
-        flex-direction: column;
-     
-    }
-  }
-
-  @media only screen and (min-width: 976px) and (max-width: 1000px) {
-    .containerHis img {
-        width: 20%; /* Ocupa toda a largura da coluna */
-        height: auto; /* Mantém a proporção da imagem */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-      }
-      .containerHis {
-        align-items: start;
-        flex-direction: column;
-     
-    }
-    .inicio {
-        text-align: justify; /* Justifica o texto */
-        margin: 0 90px;
-        margin-top: 4%;
-        font-size: 90%;
-      }
-      .NewsPag{
-        display: flex; /* Make the body a flex container */
-        min-height: 100vh; /* Set minimum height for viewport */
-        flex-direction: column; /* Arrange content vertically */
-        grid-template-rows: 1fr auto;
-      }
-      
-  }
-  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    .containerHis {
-        align-items: start;
-        flex-direction: row;
-     
-    }
-    .containerHis img {
-        width: 30%; /* Ocupa toda a largura da coluna */
-        height: auto; /* Mantém a proporção da imagem */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-      }
-  }
 
   .linkLogo{
     display: flex;
@@ -989,3 +432,28 @@ justify-content: center;
     height: 400px; /* Altura dos vídeos */
     border: none; /* Remove a borda padrão dos iframes */
 }
+
+/*footer*/
+.footer {
+    background-color: #331A4D;
+    text-align: center;
+
+    width: 100%;
+     /* Define a altura do footer */
+    bottom: 0; /* Posiciona o footer na parte inferior */
+  }
+
+.footer i {
+    color: #4f9cf9;
+    font-size: 19px;
+    background-color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.footer p {
+    margin-top: 10px;
+    color: white;
+}
+
