@@ -13,6 +13,21 @@
     
     <title>Unidos do Jardim Rezende </title>
 </head>
+   <!-- Script para limpar o localStorage -->
+   <script>
+    // Verifica se o usuário está logado ao carregar a página
+    document.addEventListener('DOMContentLoaded', function () {
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        if (isLoggedIn !== null && isLoggedIn === 'true') {
+            // Limpa os dados do localStorage
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userName');
+            console.log('Dados do usuário foram removidos do localStorage.');
+        }
+    });
+</script>
 <style>
   .item-container {
     text-align: center; /* Centraliza o conteúdo dentro do container */

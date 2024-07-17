@@ -1,5 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <script>
+        // Verifica se o usuário está logado pelo localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            var isLoggedIn = window.localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn || isLoggedIn !== 'true') {
+                alert('Não possui liberação para acessar essa página');
+                window.location.href = 'index.html';
+            } else {
+                // Exibe as informações do usuário no console
+                var userEmail = window.localStorage.getItem('userEmail');
+                var userName = window.localStorage.getItem('userName');
+                console.log("Usuário logado:", userName, userEmail);
+
+                // Verificar se os valores foram realmente recuperados
+                if (!userName || !userEmail) {
+                    console.error("Falha ao recuperar as informações do usuário do localStorage.");
+                } else {
+                    console.log("Recuperado com sucesso do localStorage:", userName, userEmail);
+                }
+            }
+        });
+
+        // Limpa o localStorage ao sair da página
+        // Limpa o localStorage ao clicar no botão de logout
+        document.addEventListener('DOMContentLoaded', function() {
+            var logoutLink = document.getElementById('logout_btn');
+            logoutLink.addEventListener('click', function(event) {
+                // Previne o comportamento padrão do link
+                event.preventDefault();
+
+                // Limpa o localStorage
+                window.localStorage.removeItem('isLoggedIn');
+                window.localStorage.removeItem('userEmail');
+                window.localStorage.removeItem('userName');
+
+                // Redireciona para a página de login
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +51,7 @@
     <link rel="stylesheet" href="css/pagAdm.css"/>
     <link rel="stylesheet" href="./CadastrarUser/cadasUser.css"/>
    
-    <title>Sidebar</title>
+    <title>Página Administrativa</title>
 </head>
 
 <body class="bodyPag">

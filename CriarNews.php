@@ -129,7 +129,9 @@ if (isset($_GET["id"])) {
   <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
+<script src='./js/liberarAcesso.js'>
+     
+    </script>
 <body class="noticias">
 <nav class="navbar">
         <!-- LOGO -->
