@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Processa o upload da imagem se existir
+    $newPath = null; // Inicializa $newPath fora do bloco condicional
     if ($path && $path['error'] == 0) {
         $ext = pathinfo($path['name'], PATHINFO_EXTENSION);
         $newPath = 'arquivosNews/' . uniqid() . '.' . $ext;
@@ -23,8 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
     } else {
-        // Mantém o caminho da imagem antiga se nenhuma nova imagem for carregada
-        $newPath = $noticia['path'];
+        // Verifica se há um caminho de imagem atual no banco de dados para manter
+        $currentImagePath = getCurrentImagePathFromDatabase($id); // Substitua pela função real para obter o caminho atual da imagem
+        $newPath = $currentImagePath ? $currentImagePath : null;
     }
 
     // Atualiza os dados no banco de dados
@@ -43,5 +45,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Erro ao alterar notícia.";
         print_r($stmt->errorInfo());
     }
+}
+
+// Função para obter o caminho atual da imagem do banco de dados
+function getCurrentImagePathFromDatabase($id) {
+    // Implemente a lógica para consultar o banco de dados e retornar o caminho da imagem atual para o ID fornecido
+    // Por exemplo:
+     $PDO = db_connect();
+     $sql = "SELECT path FROM news WHERE id = :id";
+     $stmt = $PDO->prepare($sql);
+     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+     $stmt->execute();
+     $result = $stmt->fetch(PDO::FETCH_ASSOC);
+     return $result['path'] ?? null;
 }
 ?>

@@ -58,9 +58,9 @@ h3{
   cursor: pointer;
   transition: all 0.3s ease-in-out; 
   align-items: center;
-  width: 5%;
-  height: 28px;
+  height: auto;
   font-size: 100%;
+  padding: 5px 20px;
 }
 
 .buttonEnviar.animate-buttonEnviar {
@@ -78,7 +78,7 @@ h2{
 .btnLerNoCri {
     background-color:#7c559b;
     color: white;
-   border:none;
+    border:none;
     border-radius: 10px;
     cursor: pointer;
     display: inline-block;
@@ -216,16 +216,20 @@ h2{
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 1000px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 8px;
-    overflow: hidden;
+    overflow-y: auto; /* Adicionando overflow-y: auto para permitir rolagem vertical */
+    max-height: 80vh; /* Definindo uma altura máxima para o modal */
 }
+
 
 .close {
     color: #aaa;
@@ -304,6 +308,8 @@ h2{
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
+    overflow-y: auto; /* Adicionando overflow-y: auto para permitir rolagem vertical */
+    max-height: 80vh; /* Definindo uma altura máxima para o modal */
 }
 
 .BotaoEditar{

@@ -104,13 +104,15 @@
 
         .modal-content {
             background-color: #fefefe;
-            margin: 15% auto;
+            margin: 5% auto;
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
             max-width: 1000px;
             position: relative;
             text-align: center;
+            overflow-y: auto; /* Adicionando overflow-y: auto para permitir rolagem vertical */
+            max-height: 80vh; /* Definindo uma altura máxima para o modal */
         }
 
         .close {

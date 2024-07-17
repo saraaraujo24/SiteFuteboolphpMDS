@@ -9,6 +9,10 @@ $criacao1 = "CREATE TABLE IF NOT EXISTS `calendario` (
     `data` varchar(50) DEFAULT NULL,
     `hora` varchar(50) NOT NULL,
     `local` varchar(50) NOT NULL,
+    `NameTime1` varchar(50) NOT NULL,
+    `NameTime2` varchar(50) NOT NULL,
+    `time1_img` varchar(50) NOT NULL,
+    `time2_img` varchar(50) NOT NULL,
     PRIMARY KEY (`codigo`)
     ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
 
@@ -24,35 +28,40 @@ $criacao2 = "CREATE TABLE IF NOT EXISTS `news` (
     ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
 
 $criacao3 = "CREATE TABLE IF NOT EXISTS `user` (
+    `id` int(10) NOT NULL AUTO_INCREMENT,
+    `nome` varchar(100) NOT NULL,
     `email` varchar(100) NOT NULL,
-    `senha` varchar(100) NOT NULL
+    `senha` varchar(100) NOT NULL,
+    PRIMARY KEY (`id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
+
 
 $resCria1 = mysqli_query($conecao, $criacao1);
 if ($resCria1) {
-    echo "Tabela $tdNome1 criada.<br>";
+    echo "Tabela  criada.<br>";
 } else {
-    echo "Erro ao criar tabela $tdNome1: " . mysqli_error($conecao) . "<br>";
+    echo "Erro ao criar tabela : " . mysqli_error($conecao) . "<br>";
 }
 
 $resCria2 = mysqli_query($conecao, $criacao2);
 if ($resCria2) {
-    echo "Tabela $tdNome2 criada.<br>";
+    echo "Tabela  criada.<br>";
 } else {
-    echo "Erro ao criar tabela $tdNome2: " . mysqli_error($conecao) . "<br>";
+    echo "Erro ao criar tabela : " . mysqli_error($conecao) . "<br>";
 }
 
 $resCria3 = mysqli_query($conecao, $criacao3);
 if ($resCria3) {
-    echo "Tabela $tdNome3 criada.<br>";
+    echo "Tabela  criada.<br>";
 } else {
-    echo "Erro ao criar tabela $tdNome3: " . mysqli_error($conecao) . "<br>";
+    echo "Erro ao criar tabela : " . mysqli_error($conecao) . "<br>";
 }
 
-$inserirCalendario = "INSERT INTO calendario (data, hora, local) VALUES
-    ('2024-06-20', '14:00', 'Estádio A'),
-    ('2024-06-22', '16:30', 'Estádio B'),
-    ('2024-06-25', '15:45', 'Estádio C')";
+// Corrigido para incluir todos os 7 valores
+$inserirCalendario = "INSERT INTO calendario (data, hora, local, NameTime1, NameTime2, time1_img, time2_img) VALUES
+    ('2024-06-20', '14:00', 'Estádio A', 'Brasil', 'UR', 'time1.png', 'time2.png'),
+    ('2024-06-22', '16:30', 'Estádio B', 'Team1', 'Team2', 'time1.png', 'time2.png'),
+    ('2024-06-25', '15:45', 'Estádio C', 'Team3', 'Team4', 'time1.png', 'time2.png')";
 
 $resInserirCalendario = mysqli_query($conecao, $inserirCalendario);
 if ($resInserirCalendario) {
@@ -61,9 +70,9 @@ if ($resInserirCalendario) {
     echo "Erro ao inserir dados na tabela calendario: " . mysqli_error($conecao) . "<br>";
 }
 
-$inserirUser = "INSERT INTO user (email, senha) VALUES
-    ('saramariasm17.sm@gmail.com', '123456'),
-    ('adm@adm.com', '123456')";
+$inserirUser = "INSERT INTO user (nome,email, senha) VALUES
+    ('Sara','saramariasm17.sm@gmail.com', '123456'),
+    ('Adm','adm@adm.com', '123456')";
 
 $resInserirUser = mysqli_query($conecao, $inserirUser);
 if ($resInserirUser) {

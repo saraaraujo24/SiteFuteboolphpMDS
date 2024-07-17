@@ -217,7 +217,7 @@ if (isset($_GET["id"])) {
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <div class="content1">
-                        <img id="modal-img" src="" alt="" width="50%" height="50%">
+                        <img id="modal-img" src="" alt="" width="40%" height="40%">
                         <p id="modal-data"></p>
                         <p class="noticia-titulo" id="modal-titulo"></p>
                         <p id="modal-noticia"></p>
